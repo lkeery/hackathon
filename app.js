@@ -14,7 +14,6 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
-  //res.render('index', {title: "HouseCom | ThermoSecurity System"});
   sql.getConnection((err, connection) => {
     // Error handling
     if (err) {
@@ -22,8 +21,8 @@ app.get('/', (req, res) => {
     }
 
     // If successful
-    let hero = `SELECT * FROM tbl_hero`;
-    let features = `SELECT * FROM tbl_features`;
+    const hero = `SELECT * FROM tbl_hero`;
+    const features = `SELECT * FROM tbl_features`;
   
 
     sql.query(hero, (err, rows) => {
@@ -34,13 +33,15 @@ app.get('/', (req, res) => {
         return console.log(err.message);
       }
 
-      res.render('index', rows[0]);
-    });
+      const heading = rows[0].heading;
+      const tagline = rows[0].tagline;
 
-    connection.query(features, (err, rows) => {
-      const title = rows[0].title;
+      res.render('index', {
+      title: 'HOUSECOM | THERMOSECURITY SYSTEM',
+      heading,
+      tagline
+      });
     });
-
   })
 })
 
