@@ -1,0 +1,62 @@
+//Fonts 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rajdhani&display=swap');
+
+// font-family: 'Rajdhani', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+
+// Primary colors
+$darkgrey: #222222;
+$lightblue: #3f588c;
+$darkblue: #013759;
+$accent: #D88888;
+$white: #ffffff;
+
+.hero-full-screen {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://images.pexels.com/photos/545034/pexels-photo-545034.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center center no-repeat;
+    background-size: cover;
+}
+
+.bottom-content-section {
+    position: relative;
+    top: 50px;
+
+    svg {
+      fill: $darkblue;
+    }
+  }
+
+.top-bar {
+    background: $lightblue;
+    height: 70px;
+
+    ul {
+        background: transparent;
+
+        li a {
+            color: $white;
+            font-family: 'Open Sans', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.top-bar-left {
+    margin-left: 25px;
+
+    svg {
+        max-width: 250px;
+    }
+}
+
+footer {
+    height: 250px;
+    background: $darkblue;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: $white;
+}
+
