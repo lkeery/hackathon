@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
-const sql = require('mysql');
+
+const sql = require('./utils/sql');
 
 const port = process.env.PORT || 3000;
 
@@ -13,7 +14,34 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
-  res.render('index', {title: "HouseCom | ThermoSecurity System"});
+  //res.render('index', {title: "HouseCom | ThermoSecurity System"});
+  sql.getConnection((err, connection) => {
+    // Error handling
+    if (err) {
+      return console.log(err.message);
+    }
+
+    // If successful
+    let hero = `SELECT * FROM tbl_hero`;
+    let features = `SELECT * FROM tbl_features`;
+  
+
+    sql.query(hero, (err, rows) => {
+      // Release connection
+      connection.release();
+
+      if (err) {
+        return console.log(err.message);
+      }
+
+      res.render('index', rows[0]);
+    });
+
+    connection.query(features, (err, rows) => {
+      const title = rows[0].title;
+    });
+
+  })
 })
 
 // app.get('/users', (req, res) => {
