@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
     // If successful
     const hero = `SELECT * FROM tbl_hero`;
-    const features = `SELECT * FROM tbl_features`;
+    //const features = `SELECT * FROM tbl_features`;
   
 
     sql.query(hero, (err, rows) => {
@@ -33,14 +33,17 @@ app.get('/', (req, res) => {
         return console.log(err.message);
       }
 
+      console.log(rows);
+
       const heading = rows[0].heading;
       const tagline = rows[0].tagline;
 
       res.render('index', {
-      title: 'HOUSECOM | THERMOSECURITY SYSTEM',
-      heading,
-      tagline
-      });
+        title: 'HOUSECOM | THERMOSECURITY SYSTEM',
+        heading,
+        tagline
+        });
+      
     });
   })
 })
