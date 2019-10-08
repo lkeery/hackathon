@@ -14,6 +14,7 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
+  
   sql.getConnection((err, connection) => {
     // Error handling
     if (err) {
@@ -44,7 +45,7 @@ app.get('/', (req, res) => {
       
     });
   })
-})
+  })
 
 // app.get('/users', (req, res) => {
 //   sql.getConnection((err, connection) => {
