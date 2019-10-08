@@ -102,6 +102,10 @@ footer {
         text-decoration: underline;
         color: $white;
     }
+
+    svg {
+        max-width: 25px;
+    }
 }
 
 
@@ -269,6 +273,7 @@ video {
         text-transform: uppercase;
         font-family: 'Open Sans', sans-serif;
         margin-top: 20px;
+        margin-bottom: 50px;
     }
 
     hr {
