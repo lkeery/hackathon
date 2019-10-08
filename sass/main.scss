@@ -56,9 +56,8 @@ $white: #ffffff;
     margin-left: 25px;
     background: transparent;
 
-    svg {
+    img {
         max-width: 250px;
-        margin-top: 10px;
     }
 }
 
@@ -67,7 +66,7 @@ $white: #ffffff;
 }
 
 .title-bar-left {
-    svg {
+    img {
         max-width: 250px;
     }
 }
@@ -165,11 +164,12 @@ footer {
 #functionality {
     text-align: center;
     margin-top: 50px;
-    
+
     h1 {
         text-align: center;
         color: $darkgrey;
         font-family: 'Rajdhani', sans-serif;
+        font-size: 3rem;
     }
 
     button {
@@ -184,4 +184,33 @@ footer {
     }
 }
 
+#icons-first {
+    margin-bottom: 50px;
+    text-align: center;
+    svg {
+        max-width: 200px;
+    }
+    h2 {
+        margin-top: 15px;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 3rem;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+#icons-second {
+    text-align: center;
+    svg {
+        max-width: 200px;
+    }
+    h2 {
+        margin-top: 15px;
+        font-family: 'Rajdhani', sans-serif;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
 
