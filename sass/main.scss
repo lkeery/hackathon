@@ -69,6 +69,7 @@ $white: #ffffff;
 .title-bar-left {
     img {
         max-width: 250px;
+        margin-left: 20px;
     }
 }
 
@@ -80,7 +81,7 @@ $white: #ffffff;
 }
 
 footer {
-    height: 250px;
+    height: 150px;
     background: $darkblue;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -103,9 +104,6 @@ footer {
     }
 }
 
-.footer-nav {
-    text-align: center;
-}
 
 .card {
     border-radius: 15px;
@@ -117,6 +115,7 @@ footer {
     p {
         color: $darkgrey;
         text-align: center;
+        height: 200px;
     }
 
     svg {
@@ -156,7 +155,7 @@ footer {
     }
 
     hr {
-        border: 1px solid $accent;
+        border: 2px solid $accent;
         width: 50%;
         text-align: center;
     }
@@ -183,6 +182,11 @@ footer {
         font-family: 'Open Sans', sans-serif;
         margin-top: 20px;
     }
+    hr {
+        border: 2px solid $accent;
+        width: 10%;
+        text-align: center;
+    }
 }
 
 #icons-first {
@@ -200,7 +204,7 @@ footer {
         font-family: 'Open Sans', sans-serif;
     }
     hr {
-        border: 1px solid $accent;
+        border: 2px solid $accent;
         width: 40%;
     }
       
@@ -219,7 +223,7 @@ footer {
         font-family: 'Open Sans', sans-serif;
     }
     hr {
-        border: 1px solid $accent;
+        border: 2px solid $accent;
         width: 40%;
     }
       
@@ -264,6 +268,6 @@ video {
 
     hr {
         border: 2px solid $accent;
-        width: 30%;
+        width: 15%;
     }
 }
