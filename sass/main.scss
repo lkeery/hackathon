@@ -58,6 +58,7 @@ $white: #ffffff;
 
     img {
         max-width: 250px;
+        margin-top: 10px;
     }
 }
 
@@ -236,4 +237,33 @@ footer {
 
 video {
     margin: 0;
+    padding: 0;
+}
+
+#packaging {
+    margin-top: 50px;
+    text-align: center;
+
+    h1 {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 3rem;
+        color: $darkgrey;
+        text-align: center;
+    }
+
+    button {
+        padding: 20px;
+        background: $lightblue;
+        color: $white;
+        text-align: center;
+        border-radius: 25px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 20px;
+    }
+
+    hr {
+        border: 2px solid $accent;
+        width: 30%;
+    }
 }

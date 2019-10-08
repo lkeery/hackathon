@@ -33,8 +33,6 @@ app.get('/', (req, res) => {
         return console.log(err.message);
       }
 
-      console.log(rows);
-
       const heading = rows[0].heading;
       const tagline = rows[0].tagline;
 
